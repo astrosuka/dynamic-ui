@@ -1,3 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  text-shadow: 0px 0px 3px #e8c140;
+  background-color: #101f23;
+  color: #e8c140;
+  font-family: 'Roboto', sans-serif;
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+*::selection {
+  background-color: #eb5b18;
+}
+
+h1 {
+  transform: scaleY(1.2);
+  font-size: 4rem;
+  font-weight: normal;
+  margin-bottom: 4rem;
+  border-bottom: #e8c140 1px solid;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  user-select: none;
+}
+
+.drop-down-menu {
+  height: auto;
+  text-align: center;
+  border: #e8c140 2px solid;
+}
+
+.menu-title {
+  padding: 0.5rem 2rem;
+}
+
+.drop-down-menu > menu > li {
+  list-style: none;
+  border-top: #e8c140 1px solid;
+  background-color: #17282c;
+  padding: 0.5rem;
+}
+
+.drop-down-menu > menu > li:hover {
+  background-color: #e8c140;
+  color: #162b30;
+  transition: 300ms;
+}
+
+.hidden {
+  display: none;
 }
