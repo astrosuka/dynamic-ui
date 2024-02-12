@@ -10,6 +10,10 @@ html {
   font-size: 16px;
 }
 
+li {
+  list-style: none;
+}
+
 body {
   text-shadow: 0px 0px 3px #e8c140;
   background-color: #101f23;
@@ -39,20 +43,28 @@ h1 {
 }
 
 .drop-down-menu {
-  height: auto;
+  position: relative;
   text-align: center;
-  border: #e8c140 2px solid;
 }
 
 .menu-title {
-  padding: 0.5rem 2rem;
+  border: #e8c140 2px solid;
+  padding: 0.5rem;
+}
+
+.drop-down-menu .menu-title {
+  width: 200px;
+}
+
+.drop-down-menu menu {
+  position: absolute;
+  width: 200px;
 }
 
 .drop-down-menu > menu > li {
-  list-style: none;
-  border-top: #e8c140 1px solid;
-  background-color: #17282c;
   padding: 0.5rem;
+  border: #e8c140 1px solid;
+  background-color: #17282c;
 }
 
 .drop-down-menu > menu > li:hover {
@@ -65,15 +77,49 @@ h1 {
   display: none;
 }
 
-#mobile-menu {
+.main {
+  margin-top: 4rem;
+  font-size: 1rem;
+}
+
+footer {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
+}
+
+.mobile-menu {
+  position: relative;
   display: flex;
   flex-direction: column;
   border-bottom-right-radius: 1rem;
+  user-select: none;
+  text-align: center;
+  font-size: 3rem;
 }
 
-#mobile-menu .menu-title {
+.mobile-menu .menu-title {
   order: 2;
+  border-bottom-right-radius: 3rem;
+  width: 200px;
+}
+
+.mobile-menu menu {
+  font-size: 2rem;
+  width: 200px;
+  border: #e8c140 1px dotted;
+  background-color: #17282c;
+}
+
+.mobile-menu li {
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 3rem;
+}
+
+.mobile-menu li:hover,
+.mobile-menu .menu-title:hover {
+  background-color: #e8c140;
+  color: #162b30;
+  transition: 300ms;
 }
